@@ -36,6 +36,7 @@ import HomePage from './page/HomePage';
 import EventsPage, { EventLoader as Loader } from './page/EventsPage';
 import EventDetailPage, {
   loader as eventDetailLoader,
+  action as deleteAction,
 } from './page/EventDetailPage';
 import NewEventPage, { action as newEventAction } from './page/NewEventPage';
 import EditEventPage from './page/EditEventPage';
@@ -66,6 +67,7 @@ const router = createBrowserRouter([
               {
                 index: true,
                 element: <EventDetailPage />,
+                action: deleteAction,
               },
               { path: 'edit', element: <EditEventPage /> },
             ],
